@@ -28,17 +28,21 @@ app.post('/email', function (req, res) {
     var subject = req.body.subject;
 
     if (!name) {
-        res.send("Fala el nombre");
+
+        res.status(500).send("Fala el nombre");
+
         return false;
     }
 
     if (!email) {
-        res.send("Fala el email");
+         res.status(500).send("Fala el email");
+
         return false;
     }
 
     if (!subject) {
-        res.send("Fala el subject");
+         res.status(500).send("Fala el subject");
+
         return false;
     }
 
